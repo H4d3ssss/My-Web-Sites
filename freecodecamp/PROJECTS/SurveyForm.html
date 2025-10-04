@@ -1,0 +1,150 @@
+<!-- 
+ Build a Survey Form
+Objective: Build an app that is functionally similar to https://survey-form.freecodecamp.rocks. Do not copy this demo project.
+
+User Stories:
+
+You should have a page title in an h1 element with an id of title
+You should have a short explanation in a p element with an id of description
+You should have a form element with an id of survey-form
+Inside the form element, you are required to enter your name in an input field that has an id of name and a type of text
+Inside the form element, you are required to enter your email in an input field that has an id of email
+If you enter an email that is not formatted correctly, you will see an HTML5 validation error
+Inside the form, you can enter a number in an input field that has an id of number
+The number input should not accept non-numbers, either by preventing you from typing them or by showing an HTML5 validation error (depending on your browser).
+If you enter numbers outside the range of the number input, which are defined by the min and max attributes, you will see an HTML5 validation error
+For the name, email, and number input fields, you can see corresponding label elements in the form, that describe the purpose of each field with the following ids: id="name-label", id="email-label", and id="number-label"
+For the name, email, and number input fields, you can see placeholder text that gives a description or instructions for each field
+Inside the form element, you should have a select dropdown element with an id of dropdown and at least two options to choose from
+Inside the form element, you can select an option from a group of at least two radio buttons that are grouped using the name attribute
+Inside the form element, you can select several fields from a series of checkboxes, each of which must have a value attribute
+Inside the form element, you are presented with a textarea for additional comments
+Inside the form element, you are presented with a button with id of submit to submit all the inputs
+Fulfill the user stories and pass all the tests below to complete this project. Give it your own personal style. Happy Coding!
+
+Note: Be sure to add <link rel="stylesheet" href="styles.css"> in your HTML to link your stylesheet and apply your CSS
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/SurveyStyle.css">
+    <title>Survey Form</title>
+</head>
+
+<body>
+    <div>
+        <section>
+            <h1 id="title">
+                &lt;/&gt;R.Dev Survey Form
+            </h1>
+            <p id="description">
+                <em>Take a minute to share your thoughts—your feedback helps me to improve.</em>
+            </p>
+        </section>
+    </div>
+    <div>
+        <form id="survey-form" action="">
+            <label for="name" id="name-label">
+                Name
+            </label>
+            <input type="text" name="" id="name" placeholder="Enter your full name" required>
+            <br>
+            <label for="email" id="email-label">
+                Email
+            </label>
+            <input type="email" name="" id="email" placeholder="Enter your email address" required>
+            <br>
+            <label for="number" id="number-label">
+                Age
+            </label>
+            <input type="number" name="" id="number" min="18" max="100" placeholder="Enter your age">
+            <br>
+            <label for="dropdown">
+                Gender
+            </label>
+            <select name="" id="dropdown">
+                <option value="" disabled selected>
+                    Select your Gender
+                </option>
+                <option value="male">
+                    Male
+                </option>
+                <option value="female">
+                    Female
+                </option>
+                <option value="lgbtqia+">
+                    LGBTQIA+
+                </option>
+                <option value="prefer-not">
+                    Prefer not to say
+                </option>
+            </select>
+            <br>
+            <label for="satisfaction">How satisfied are you with my website?</label>
+            <br>
+
+            <input type="radio" name="satisfaction" id="very-satisfied" value="very-satisfied">
+            <label for="very-satisfied">Very Satisfied</label>
+            <br>
+
+            <input type="radio" name="satisfaction" id="satisfied" value="satisfied">
+            <label for="satisfied">Satisfied</label>
+            <br>
+
+            <input type="radio" name="satisfaction" id="neutral" value="neutral">
+            <label for="neutral">Neutral</label>
+            <br>
+
+            <input type="radio" name="satisfaction" id="unsatisfied" value="unsatisfied">
+            <label for="unsatisfied">Unsatisfied</label>
+            <br>
+
+            <input type="radio" name="satisfaction" id="very-unsatisfied" value="very-unsatisfied">
+            <label for="very-unsatisfied">Very Unsatisfied</label>
+            <br>
+            <label>What are the things I could do to make your experience even better?</label>
+            <br>
+
+            <input type="checkbox" name="improvements[]" id="features" value="Add more useful features">
+            <label for="features">Add more useful features</label>
+            <br>
+
+            <input type="checkbox" name="improvements[]" id="mobile" value="Improve mobile friendliness">
+            <label for="mobile">Improve mobile friendliness</label>
+            <br>
+
+            <input type="checkbox" name="improvements[]" id="navigation" value="Simplify navigation">
+            <label for="navigation">Simplify navigation</label>
+            <br>
+
+            <input type="checkbox" name="improvements[]" id="design" value="Enhance design and visuals">
+            <label for="design">Enhance design and visuals</label>
+            <br>
+
+            <input type="checkbox" name="improvements[]" id="bugs" value="Fix bugs or broken links">
+            <label for="bugs">Fix bugs or broken links</label>
+            <br>
+
+            <input type="checkbox" name="improvements[]" id="accessibility" value="Improve accessibility">
+            <label for="accessibility">Improve accessibility</label>
+            <br>
+
+            <label for="other">Other:</label>
+            <input type="text" name="other" id="other" placeholder="Type your own idea">
+            <br><br>
+
+            <label for="comments">Any additional comments or suggestions?</label><br>
+            <textarea name="comments" id="comments" rows="4" cols="50" placeholder="Share your thoughts here...">
+            </textarea>
+            <button id="submit">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>
